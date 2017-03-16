@@ -1,0 +1,52 @@
+<?xml version='1.0' standalone='yes'?>
+<game>
+  <title visible="no">Your Game Title</title>
+  <logo>your_game_logo.png</logo>
+  <pitch>Short one sentence pitch to sell your game.</pitch>
+  <buylink link="no"><![CDATA[<iframe frameborder="0" src="https://itch.io/embed/22263" width="552" height="167"></iframe>]]></buylink>
+  <trailer><![CDATA[Embed tag from Youtube, Vimeo or other video service]]></trailer>
+  <subhead>Subheading for your game description</subhead>
+  <description>A cool description of what your game is and why people want to play it.</description>
+  <features>
+   <feature>
+    First Feature
+   </feature>
+   <feature>
+    Second Feature
+   </feature>
+   <feature>
+    Third Feature. Add more feature tags as needed.
+   </feature>
+  </features>
+  <splashart>cool_image.png</splashart>
+  <screenshots>
+	<screenshot>screenshot_1.png</screenshot>
+	<screenshot>screenshot_2.png</screenshot>
+	<screenshot>screenshot_3.png</screenshot>
+  </screenshots>
+  <subscription>
+	<image>subscribe_image.png</image>
+	<header>Subscription Header</header>
+	<description>Tell people about what they get for subscribing to your news letter.</description>
+	<subscribe link="no"><![CDATA[The embed code for a newsletter service like Mail Chimp. Alternatively, you can just use a link to a service, just change the link attribute to "yes".]]></subscribe>
+  </subscription>
+  <sociallinks>
+	<facebook>https://www.facebook.com/YourFaceBook</facebook>
+	<twitter>https://twitter.com/yourtwitter</twitter>
+	<imgur>https://imgur.com/user/yourimgur</imgur>
+	<youtube>https://www.youtube.com/channel/youryoutube</youtube>
+  </sociallinks>
+  <company>
+	<logo>company_logo.png</logo>
+	<name>Your Company Name</name>
+	<link>https://yourcompanysite.com</link>
+  </company>
+  <presskit>http://yourpresskit.com</presskit>
+  <css>
+	  <bodycolor>#222222</bodycolor>
+	  <contentcolor>#eeeeee</contentcolor>
+	  <fontcolor>#000000</fontcolor>
+  </css>
+  <analytics><![CDATA[Your Analytics code from a service like google analytics.]]></analytics>
+  <hrs visible="yes"><![CDATA[//add custom hr css here to override default css or turn off hr tags by changing the visible attribute to "no"]]></hrs>
+</game>
