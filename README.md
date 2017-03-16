@@ -15,4 +15,4 @@ You can see the simple site builder in action at http://manlyboy.divineknightgam
 - Add More Social Media Options. I am open for suggestions on commonly used social media platforms.
 - Include consistently sized social media icons
 - Add more css options for the various information blocks
-- Add the option for a slideshow style screeshot display block.
+- Add the option for a slideshow style screenshot display block.
