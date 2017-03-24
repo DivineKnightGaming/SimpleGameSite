@@ -21,3 +21,7 @@ You can see the Simple Game Site Builder in action at http://manlyboy.divineknig
 
 - Developed By E. Zachary Knight of Divine Knight Gaming
 - Inspiration for Simple Game Site Builder, Justin Carroll's article: http://www.gamasutra.com/blogs/JustinCarroll/20170227/292498/How_to_Make_Effective_Official_Game_Websites_Really_Fast.php
+
+# Showcase
+
+If you do use Simple Game Site Builder, please let me know. It would be great to have a running list of those who have found this useful. Just let me know through Twitter @dk_gaming.
