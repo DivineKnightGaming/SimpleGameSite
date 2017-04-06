@@ -133,11 +133,23 @@ $game_info = simplexml_load_file('game_info.xml');
 				<?php if(isset($game_info->sociallinks->twitter) && $game_info->sociallinks->twitter != ""){?>
 				<li><a href="<?php echo($game_info->sociallinks->twitter); ?>"><img src="images/twitter.png" /></a></li>
 				<?php } ?>
+				<?php if(isset($game_info->sociallinks->googleplus) && $game_info->sociallinks->googleplus != ""){?>
+				<li><a href="<?php echo($game_info->sociallinks->googleplus); ?>"><img src="images/google-plus.png" /></a></li>
+				<?php } ?>
+				<?php if(isset($game_info->sociallinks->tumblr) && $game_info->sociallinks->tumblr != ""){?>
+				<li><a href="<?php echo($game_info->sociallinks->tumblr); ?>"><img src="images/tumblr.png" /></a></li>
+				<?php } ?>
+				<?php if(isset($game_info->sociallinks->instagram) && $game_info->sociallinks->instagram != ""){?>
+				<li><a href="<?php echo($game_info->sociallinks->instagram); ?>"><img src="images/instagram.png" /></a></li>
+				<?php } ?>
 				<?php if(isset($game_info->sociallinks->imgur) && $game_info->sociallinks->imgur != ""){?>
 				<li><a href="<?php echo($game_info->sociallinks->imgur); ?>"><img src="images/imgur.png" /></a></li>
 				<?php } ?>
 				<?php if(isset($game_info->sociallinks->youtube) && $game_info->sociallinks->youtube != ""){?>
 				<li><a href="<?php echo($game_info->sociallinks->youtube); ?>"><img src="images/youtube.png" /></a></li>
+				<?php } ?>
+				<?php if(isset($game_info->sociallinks->vimeo) && $game_info->sociallinks->vimeo != ""){?>
+				<li><a href="<?php echo($game_info->sociallinks->vimeo); ?>"><img src="images/vimeo.png" /></a></li>
 				<?php } ?>
 			</ul>
 		</div>
