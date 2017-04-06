@@ -13,7 +13,7 @@ You can see the Simple Game Site Builder in action at http://manlyboy.divineknig
 # ToDo
 
 - [X] Add More Social Media Options. I am open for suggestions on commonly used social media platforms.
-- [X]Include consistently sized social media icons
+- [X] Include consistently sized social media icons
 - [ ] Add more css options for the various information blocks
 - [ ] Add the option for a slideshow style screenshot display block.
 
