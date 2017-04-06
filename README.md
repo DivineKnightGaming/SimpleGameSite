@@ -21,6 +21,7 @@ You can see the Simple Game Site Builder in action at http://manlyboy.divineknig
 
 - Developed By E. Zachary Knight of Divine Knight Gaming
 - Inspiration for Simple Game Site Builder, Justin Carroll's article: http://www.gamasutra.com/blogs/JustinCarroll/20170227/292498/How_to_Make_Effective_Official_Game_Websites_Really_Fast.php
+- Icons made by [Freepik](http://www.freepik.com) from [Flaticon.com](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 
 # Showcase
 
