@@ -33,8 +33,12 @@
   <sociallinks>
 	<facebook>https://www.facebook.com/YourFaceBook</facebook>
 	<twitter>https://twitter.com/yourtwitter</twitter>
+	<googleplus>https://plus.google.com/YourGooglePlus</googleplus>
+	<tumblr>https://tumblr.com/yourtumblr</tumblr>
+	<instagram>https://instagram.com/yourinstagram</instagram>
 	<imgur>https://imgur.com/user/yourimgur</imgur>
 	<youtube>https://www.youtube.com/channel/youryoutube</youtube>
+	<vimeo>https://www.vimeo.com/channel/yourvimeo</vimeo>
   </sociallinks>
   <company>
 	<logo>company_logo.png</logo>
