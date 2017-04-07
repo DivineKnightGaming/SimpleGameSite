@@ -16,6 +16,7 @@ You can see the Simple Game Site Builder in action at http://manlyboy.divineknig
 - [X] Include consistently sized social media icons
 - [ ] Add more css options for the various information blocks
 - [ ] Add the option for a slideshow style screenshot display block.
+- [ ] Add Support for Bandcamp or other methods for soundtrack sales.
 
 # Credits
 
