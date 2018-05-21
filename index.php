@@ -3,20 +3,18 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width"/>
 	<!-- Powered by E. Zachary Knight and Divine Knight Gaming's Simple Game Site Maker -->
-<?PHP
-
+<?php
 $game_info = simplexml_load_file('game_info.xml');
-
 ?>
-	<title><?php echo($game_info->title); ?> by <?php echo($game_info->company->name); ?></title>
-	<link rel="stylesheet" href="style.css">
+	<title><?= $game_info->title ?> by <?= $game_info->company->name ?></title>
+	<link rel="stylesheet" href="css/style.css">
 	<style>
 		body {
-			background-color: <?php echo($game_info->css->bodycolor); ?>;
+			background-color: <?= $game_info->css->bodycolor ?>;
 		}
 		.content {
-			background-color: <?php echo($game_info->css->contentcolor); ?>;
-			color: <?php echo($game_info->css->fontcolor); ?>;
+			background-color: <?= $game_info->css->contentcolor ?>;
+			color: <?= $game_info->css->fontcolor ?>;
 		}
 		hr {
 			<?php echo($game_info->hrs); 
@@ -34,18 +32,27 @@ $game_info = simplexml_load_file('game_info.xml');
 			?>
 		}
 	</style>
-	<?php echo($game_info->analytics); ?>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<?php if($game_info->screenshots["slideshow"] == "no"): ?>
+		<script src="js/lightbox/lightbox.js"></script>
+		<link href="css/lightbox/lightbox.css" rel="stylesheet">
+	<?php else: ?>
+		<link  href="css/slider/fotorama.css" rel="stylesheet">
+		<script src="js/slider/fotorama.js"></script>
+	<?php endif; ?>
+	
+	<?= $game_info->analytics ?>
 </head>
 <body>
 	<div class="content">
 		<div class="title">
-			<?php
-				if($game_info->title["visible"] == "yes"){
-			?>
-			<h1><?php echo($game_info->title); ?></h1>
-			<?php } ?>
-			<img src="images/<?php echo($game_info->logo); ?>" alt="<?php echo($game_info->title); ?> by <?php echo($game_info->company->name); ?>" />
-			<p><?php echo($game_info->pitch); ?></p>
+			<?php if($game_info->title["visible"] == "yes"): ?>
+				<h1><?= $game_info->title ?></h1>
+			<?php endif; ?>
+			<img src="images/<?= $game_info->logo ?>" alt="<?= $game_info->title ?> by <?=$game_info->company->name ?>" />
+			<p><?= $game_info->pitch ?></p>
 			<?php
 				if($game_info->buylink['link'] == "no"){
 					echo("<div class=\"buyembed\">".$game_info->buylink."</div>");
@@ -55,18 +62,18 @@ $game_info = simplexml_load_file('game_info.xml');
 				}
 			?>
 		</div>
-		<?php echo($hr); ?>
+		<?= $hr ?>
 		<div class="trailer">
-			<?php echo($game_info->trailer); ?>
+			<?= $game_info->trailer ?>
 		</div>
-		<?php echo($hr); ?>
+		<?= $hr ?>
 		<div class="info">
 			<div class="rightimg">
-				<img src="images/<?php echo($game_info->splashart); ?>" />
+				<img src="images/<?= $game_info->splashart ?>" />
 			</div>
 			<div class="leftinfo">
-				<h2><?php echo($game_info->subhead); ?></h2>
-				<p><?php echo($game_info->description); ?></p>
+				<h2><?= $game_info->subhead ?></h2>
+				<p><?= $game_info->description ?></p>
 				<ul>
 					<?php
 						foreach($game_info->features->feature as $feature){
@@ -76,13 +83,14 @@ $game_info = simplexml_load_file('game_info.xml');
 				</ul>
 			</div>
 		</div>
-		<?php echo($hr); ?>
+		<?= $hr ?>
 		<div class="screenshots">
+			<?php if($game_info->screenshots["slideshow"] == "no"): ?>
 			<div class="imgcol1">
 				<?php
 					$col1 = floor(count($game_info->screenshots->screenshot)/2);
 				for($i = 0;$i < $col1;$i++){
-					echo("<img src=\"images/".$game_info->screenshots->screenshot[$i]."\" />");
+					echo("<a href=\"images/".$game_info->screenshots->screenshot[$i]."\" data-lightbox=\"screenshot-set\" data-title=\"".$game_info->screenshots->screenshot[$i]["alt"]."\"><img src=\"images/".$game_info->screenshots->screenshot[$i]."\" alt=\"".$game_info->screenshots->screenshot[$i]["alt"]."\" /></a>");
 				}
 				?>
 			</div>
@@ -90,7 +98,7 @@ $game_info = simplexml_load_file('game_info.xml');
 				<?php
 					$col2 = $col1*2;
 				for($j = $i;$j < $col2;$j++){
-					echo("<img src=\"images/".$game_info->screenshots->screenshot[$j]."\" />");
+					echo("<a href=\"images/".$game_info->screenshots->screenshot[$i]."\" data-lightbox=\"screenshot-set\" data-title=\"".$game_info->screenshots->screenshot[$i]["alt"]."\"><img src=\"images/".$game_info->screenshots->screenshot[$j]."\" alt=\"".$game_info->screenshots->screenshot[$i]["alt"]."\" /></a>");
 				}
 				?>
 			</div>
@@ -98,19 +106,28 @@ $game_info = simplexml_load_file('game_info.xml');
 				if(count($game_info->screenshots->screenshot)%2 == 1)
 				{
 					echo("<div class=\"imglast\">");
-					echo("<img src=\"images/".$game_info->screenshots->screenshot[count($game_info->screenshots->screenshot)-1]."\" />");
+					echo("<a href=\"images/".$game_info->screenshots->screenshot[$i]."\" data-lightbox=\"screenshot-set\" data-title=\"".$game_info->screenshots->screenshot[$i]["alt"]."\"><img src=\"images/".$game_info->screenshots->screenshot[count($game_info->screenshots->screenshot)-1]."\" alt=\"".$game_info->screenshots->screenshot[$i]["alt"]."\" /></a>");
 					echo("</div>");
 				}
 			?>
+			<?php else: ?>
+				<div class="fotorama"  data-nav="thumbs">
+					<?php 
+					for($i = 0;$i < count($game_info->screenshots->screenshot);$i++){
+						echo("<img src=\"images/".$game_info->screenshots->screenshot[$i]."\" alt=\"".$game_info->screenshots->screenshot[$i]["alt"]."\" />");
+					}
+					?>
+				</div>
+			<?php endif; ?>
 		</div>
-		<?php echo($hr); ?>
+		<?= $hr ?>
 		<div class="subscribe">
 			<div class="leftimg">
-				<img src="images/<?php echo($game_info->subscription->image); ?>" />
+				<img src="images/<?= $game_info->subscription->image ?>" />
 			</div>
 			<div class="rightsubscribe">
-				<h2><?php echo($game_info->subscription->header); ?></h2>
-				<p><?php echo($game_info->subscription->description); ?></p>
+				<h2><?= $game_info->subscription->header ?></h2>
+				<p><?= $game_info->subscription->description ?></p>
 				<div>
 					<?php 
 						if($game_info->subscription->subscribe["link"] == "no"){
@@ -124,42 +141,42 @@ $game_info = simplexml_load_file('game_info.xml');
 				</div>
 			</div>
 		</div>
-		<?php echo($hr); ?>
+		<?= $hr ?>
 		<div class="social">
 			<ul>
 				<?php if(isset($game_info->sociallinks->facebook) && $game_info->sociallinks->facebook != ""){?>
-				<li><a href="<?php echo($game_info->sociallinks->facebook); ?>"><img src="images/facebook.png" /></a></li>
+				<li><a href="<= $game_info->sociallinks->facebook ?>"><img src="images/facebook.png" /></a></li>
 				<?php } ?>
 				<?php if(isset($game_info->sociallinks->twitter) && $game_info->sociallinks->twitter != ""){?>
-				<li><a href="<?php echo($game_info->sociallinks->twitter); ?>"><img src="images/twitter.png" /></a></li>
+				<li><a href="<?= $game_info->sociallinks->twitter ?>"><img src="images/twitter.png" /></a></li>
 				<?php } ?>
 				<?php if(isset($game_info->sociallinks->googleplus) && $game_info->sociallinks->googleplus != ""){?>
-				<li><a href="<?php echo($game_info->sociallinks->googleplus); ?>"><img src="images/google-plus.png" /></a></li>
+				<li><a href="<?= $game_info->sociallinks->googleplus ?>"><img src="images/google-plus.png" /></a></li>
 				<?php } ?>
 				<?php if(isset($game_info->sociallinks->tumblr) && $game_info->sociallinks->tumblr != ""){?>
-				<li><a href="<?php echo($game_info->sociallinks->tumblr); ?>"><img src="images/tumblr.png" /></a></li>
+				<li><a href="<?= $game_info->sociallinks->tumblr ?>"><img src="images/tumblr.png" /></a></li>
 				<?php } ?>
 				<?php if(isset($game_info->sociallinks->instagram) && $game_info->sociallinks->instagram != ""){?>
-				<li><a href="<?php echo($game_info->sociallinks->instagram); ?>"><img src="images/instagram.png" /></a></li>
+				<li><a href="<?= $game_info->sociallinks->instagram ?>"><img src="images/instagram.png" /></a></li>
 				<?php } ?>
 				<?php if(isset($game_info->sociallinks->imgur) && $game_info->sociallinks->imgur != ""){?>
-				<li><a href="<?php echo($game_info->sociallinks->imgur); ?>"><img src="images/imgur.png" /></a></li>
+				<li><a href="<?= $game_info->sociallinks->imgur ?>"><img src="images/imgur.png" /></a></li>
 				<?php } ?>
 				<?php if(isset($game_info->sociallinks->youtube) && $game_info->sociallinks->youtube != ""){?>
-				<li><a href="<?php echo($game_info->sociallinks->youtube); ?>"><img src="images/youtube.png" /></a></li>
+				<li><a href="<?= $game_info->sociallinks->youtube ?>"><img src="images/youtube.png" /></a></li>
 				<?php } ?>
 				<?php if(isset($game_info->sociallinks->vimeo) && $game_info->sociallinks->vimeo != ""){?>
-				<li><a href="<?php echo($game_info->sociallinks->vimeo); ?>"><img src="images/vimeo.png" /></a></li>
+				<li><a href="<?= $game_info->sociallinks->vimeo ?>"><img src="images/vimeo.png" /></a></li>
 				<?php } ?>
 			</ul>
 		</div>
-		<?php echo($hr); ?>
+		<?= $hr ?>
 		<div class="companyinfo">
 			<div class="logo">
-				<a href="<?php echo($game_info->company->link); ?>"><img src="images/<?php echo($game_info->company->logo); ?>" alt="<?php echo($game_info->company->name); ?>" /></a>
+				<a href="<?= $game_info->company->link ?>"><img src="images/<?= $game_info->company->logo ?>" alt="<?= $game_info->company->name ?>" /></a>
 			</div>
 			<div class="presskit">
-				<a href="<?php echo($game_info->presskit); ?>">Press kit</a>
+				<a href="<?= $game_info->presskit ?>">Press kit</a>
 			</div>
 		</div>
 	</div>
