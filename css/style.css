@@ -1,0 +1,172 @@
+body {
+}
+.content {
+	width: 1000px ;
+	margin-left: auto ;
+	margin-right: auto ;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	padding-right: 0em;
+}
+
+img {
+	width: 98%;
+}
+
+div .title {
+	text-align: center;
+	width: 98%;
+	margin: auto;
+	margin-bottom: 2em;
+}
+
+div .buyembed {
+	width: 98%;
+	margin: auto;
+}
+
+div .buynow {
+	width: 20%;
+	height: 3em;
+	background-color: #196b08;
+	line-height: 3em;
+	margin: auto;
+}
+.buynow a {
+	color: #eeeeee;
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+div .trailer {
+	text-align: center;
+	width: 98%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+div .info {
+	text-align: left;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 1em;
+	padding-left: .5em;
+	overflow: auto;
+}
+
+div .leftinfo {
+	width: 60%;
+}
+div .rightimg {
+	width: 40%;
+	float: right;
+	clear: all;
+}
+
+div .screenshots {
+	text-align: center;
+	width: 80%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+
+.screenshots img {
+	margin-bottom: 1em;
+}
+
+div .imgcol1 {
+	width: 48%;
+	float: left;
+}
+
+div .imgcol2 {
+	width: 48%;
+	overflow: hidden;
+	float: right;
+}
+div .imglast {
+	width: 48%;
+	margin: auto;
+}
+
+div .subscribe {
+	text-align: left;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 1em;
+	padding-left: .5em;
+	overflow: auto;
+}
+
+div .subscribenow {
+	width: 48%;
+	height: 3em;
+	background-color: #f61222;
+	line-height: 3em;
+	text-align: center;
+	margin: auto;
+}
+.subscribenow a {
+	color: #eeeeee;
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+div .leftimg {
+	width: 38%;
+	float: left;
+}
+div .rightsubscribe {
+	width: 58%;
+	overflow: hidden;
+}
+
+div .social {
+	text-align: center;
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.social ul {
+  white-space: nowrap;
+}
+
+.social li {
+  list-style: none;
+  display: inline;
+}
+
+.social img{
+	width: 32px;
+	margin-bottom: 0em;
+}
+
+div .companyinfo {
+	text-align: center;
+	width: 24%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+
+div .logo {
+	width: 48%;
+	float: left;
+}
+div .presskit {
+	width: 48%;
+	overflow: hidden;
+}
+
+hr {
+	 border: 0; 
+	 height: 1px; 
+	 background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}

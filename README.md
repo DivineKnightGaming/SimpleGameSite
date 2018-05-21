@@ -14,8 +14,10 @@ You can see the Simple Game Site Builder in action at http://manlyboy.divineknig
 
 - [X] Add More Social Media Options. I am open for suggestions on commonly used social media platforms.
 - [X] Include consistently sized social media icons
+- [X] Added ability to click to enlarge included screenshots, plus alt text for all images.
+- [X] Made QOL changes to PHP elements
+- [X] Add the option for a slideshow style screenshot display block.
 - [ ] Add more css options for the various information blocks
-- [ ] Add the option for a slideshow style screenshot display block.
 - [ ] Add Support for Bandcamp or other methods for soundtrack sales.
 
 # Credits
@@ -23,6 +25,8 @@ You can see the Simple Game Site Builder in action at http://manlyboy.divineknig
 - Developed By E. Zachary Knight of Divine Knight Gaming
 - Inspiration for Simple Game Site Builder, Justin Carroll's article: http://www.gamasutra.com/blogs/JustinCarroll/20170227/292498/How_to_Make_Effective_Official_Game_Websites_Really_Fast.php
 - Icons made by [Freepik](http://www.freepik.com) from [Flaticon.com](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+- Click to Enlarge using [Lightbox](http://www.lokeshdhakar.com/projects/lightbox2/)
+- Image Gallery by [Fotorama](http://fotorama.io/)
 
 # Showcase
 

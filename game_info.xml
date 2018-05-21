@@ -18,14 +18,14 @@
     Third Feature. Add more feature tags as needed.
    </feature>
   </features>
-  <splashart>cool_image.png</splashart>
-  <screenshots>
-	<screenshot>screenshot_1.png</screenshot>
-	<screenshot>screenshot_2.png</screenshot>
-	<screenshot>screenshot_3.png</screenshot>
+  <splashart alt="Cool Splash Art">cool_image.png</splashart>
+  <screenshots slideshow="no">
+	<screenshot alt="Screenshot 1">screenshot_1.png</screenshot>
+	<screenshot alt="Screenshot 2">screenshot_2.png</screenshot>
+	<screenshot alt="Screenshot 3">screenshot_3.png</screenshot>
   </screenshots>
   <subscription>
-	<image>subscribe_image.png</image>
+	<image alt="Subscribe Image">subscribe_image.png</image>
 	<header>Subscription Header</header>
 	<description>Tell people about what they get for subscribing to your news letter.</description>
 	<subscribe link="no"><![CDATA[The embed code for a newsletter service like Mail Chimp. Alternatively, you can just use a link to a service, just change the link attribute to "yes".]]></subscribe>
