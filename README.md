@@ -6,7 +6,7 @@ Just update the included xml file with your game's information and buy and subsc
 
 Then put your screenshots, header image, splash images for the feature list and subscribe block in the provided images folder. 
 
-Using your preferred FTP method, upload the included style.css, game_info.xml, and index.php files and the images directory and all its content to your webserver and the site takes care of itself. 
+Using your preferred FTP method, upload the included game_info.xml, index.php files and the images, css, and js directories and all their content to your webserver and the site takes care of itself. 
 
 You can see the Simple Game Site Builder in action at http://manlyboy.divineknightgaming.com/
 
