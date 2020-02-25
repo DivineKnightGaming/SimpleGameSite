@@ -31,3 +31,10 @@ You can see the Simple Game Site Builder in action at http://manlyboy.divineknig
 # Showcase
 
 If you do use Simple Game Site Builder, please let me know. It would be great to have a running list of those who have found this useful. Just let me know through Twitter @dk_gaming.
+
+# Change Log
+
+February 2020
+
+- Fixed bug with hr tags
+- General code clean up
